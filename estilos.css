@@ -212,3 +212,34 @@ img{
 .btn-whatsapp:hover .tooltip-text {
   visibility: visible;
 }
+
+/*animacion de scrool aparecen las cajas*/
+
+@keyframes show{ /*nombre de la animacion "show"*/
+
+from{
+opacity: 0;
+scale: 25%;
+
+
+}to{
+
+  opacity: 1;
+  scale:100%;
+}
+
+
+}
+.trabajo{  /*aqui va el objero que se quiere aplicar la animacion */
+  view-timeline-name: --caja; /*solo "--caja" es una variable */
+  view-timeline-axis: block;
+
+  animation-timeline: --caja;
+  animation-name: show;
+
+animation-range: entry 25% cover 40%;  /*MUY IMPORTANTE ES PARA QUE SE DESPLACE 
+EL OBJETO A TODO SU ANCHO CUANDO DAMOS SCROLL*/
+
+}
+
+
